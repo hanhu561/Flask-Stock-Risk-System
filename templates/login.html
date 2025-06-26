@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="static/assets/css/script.css">
+</head>
+<body id="particles-js">
+<div class="animated bounceInDown">
+    <div class="container">
+            <span class="error animated tada" id="msg" {% if error_msg %}style="display: block;" {% endif %}>
+                {{ error_msg }}
+            </span>
+        <form name="form1" class="box" onsubmit="return checkStuff()" method="post">
+            <h4>Wang<span>Han</span></h4>
+            <h5>Sign in to your account.</h5>
+            <input type="text" name="email" placeholder="Email" autocomplete="off">
+            <i class="typcn typcn-eye" id="eye"></i>
+            <input type="password" name="password" placeholder="Password" id="pwd" autocomplete="off">
+            <label>
+                <input type="checkbox">
+                <span></span>
+                <small class="rmb">Remember me</small>
+            </label>
+            <a href="#" class="forgetpass">Forget Password?</a>
+            <input type="submit" value="Sign in" class="btn1">
+        </form>
+        <a href="#" class="dnthave">Don’t have an account? Sign up</a>
+    </div>
+    <div class="footer">
+        <span>Made with <i class="fa fa-heart pulse"></i> by <a href="Http://www.bootstrapmb.com">WangHan</a></span>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yeshadmin:Customer Relationship Management Admin Bootstrap 5 Template">
+    <meta property="og:title" content="Yeshadmin:Customer Relationship Management Admin Bootstrap 5 Template">
+    <meta property="og:description" content="Yeshadmin:Customer Relationship Management Admin Bootstrap 5 Template">
+    <meta property="og:image" content="https://yeshadmin.dexignzone.com/xhtml/social-image.png">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <title>Investment Management System</title>
+
+    <link rel="shortcut icon" type="image/png" href="static/assets/main/images/favicon.png">
+
+    <link href="static/assets/main/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="static/assets/main/vendor/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="static/assets/main/vendor/swiper/css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.css">
+    <link href="static/assets/main/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+    <link href="static/assets/main/vendor/tagify/dist/tagify.css" rel="stylesheet">
+
+
+    <link href="static/assets/main/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div id="main-wrapper">
+
+    <div class="nav-header">
+        <a href="{{ url_for('home') }}" class="brand-logo">
+            <svg class="logo-abbr" width="auto" height="30" viewBox="0 0 32 30" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <image href="static/assets/images/banner/logo.png" width="100" height="50"/>
+
+
+            </svg>
+        </a>
+    </div>
+
+
+    </a>
+    <div class="nav-control">
+        <div class="hamburger">
+                    <span class="line">
+						<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10.7468 5.58925C11.0722 5.26381 11.0722 4.73617 10.7468 4.41073C10.4213 4.0853 9.89369 4.0853 9.56826 4.41073L4.56826 9.41073C4.25277 9.72622 4.24174 10.2342 4.54322 10.5631L9.12655 15.5631C9.43754 15.9024 9.96468 15.9253 10.3039 15.6143C10.6432 15.3033 10.6661 14.7762 10.3551 14.4369L6.31096 10.0251L10.7468 5.58925Z"
+                                  fill="#452B90"/>
+							<path opacity="0.3"
+                                  d="M16.5801 5.58924C16.9056 5.26381 16.9056 4.73617 16.5801 4.41073C16.2547 4.0853 15.727 4.0853 15.4016 4.41073L10.4016 9.41073C10.0861 9.72622 10.0751 10.2342 10.3766 10.5631L14.9599 15.5631C15.2709 15.9024 15.798 15.9253 16.1373 15.6143C16.4766 15.3033 16.4995 14.7762 16.1885 14.4369L12.1443 10.0251L16.5801 5.58924Z"
+                                  fill="#452B90"/>
+						</svg>
+					</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="deznav">
+    <div class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li class="menu-title">YOUR PLATFORM</li>
+            <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
+                <div class="menu-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.13478 20.7733V17.7156C9.13478 16.9351 9.77217 16.3023 10.5584 16.3023H13.4326C13.8102 16.3023 14.1723 16.4512 14.4393 16.7163C14.7063 16.9813 14.8563 17.3408 14.8563 17.7156V20.7733C14.8539 21.0978 14.9821 21.4099 15.2124 21.6402C15.4427 21.8705 15.756 22 16.0829 22H18.0438C18.9596 22.0024 19.8388 21.6428 20.4872 21.0008C21.1356 20.3588 21.5 19.487 21.5 18.5778V9.86686C21.5 9.13246 21.1721 8.43584 20.6046 7.96467L13.934 2.67587C12.7737 1.74856 11.1111 1.7785 9.98539 2.74698L3.46701 7.96467C2.87274 8.42195 2.51755 9.12064 2.5 9.86686V18.5689C2.5 20.4639 4.04738 22 5.95617 22H7.87229C8.55123 22 9.103 21.4562 9.10792 20.7822L9.13478 20.7733Z"
+                              fill="#90959F"/>
+                    </svg>
+                </div>
+                <span class="nav-text">Home</span>
+            </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ url_for('home') }}">Personal Account</a></li>
+                </ul>
+            </li>
+
+
+            <li><a href="{{ url_for('portfolio') }}" class="" aria-expanded="false">
+                <div class="menu-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_113_177)">
+                            <path d="M17 4H6C4.79111 4 4 4.7 4 6V18C4 19.3 4.79111 20 6 20H18C19.2 20 20 19.3 20 18V7.20711C20 7.0745 19.9473 6.94732 19.8536 6.85355L17 4ZM17 11H7V4H17V11Z"
+                                  fill="#90959F"/>
+                            <path opacity="0.3"
+                                  d="M14.5 4H12.5C12.2239 4 12 4.22386 12 4.5V8.5C12 8.77614 12.2239 9 12.5 9H14.5C14.7761 9 15 8.77614 15 8.5V4.5C15 4.22386 14.7761 4 14.5 4Z"
+                                  fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_113_177">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="nav-text">Portfolio</span>
+            </a>
+            </li>
+
+            <li><a href="{{ url_for('stockview') }}" class="" aria-expanded="false">
+                <div class="menu-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_115_172)">
+                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M12 4.25933C12.1489 4.25921 12.3 4.29247 12.4426 4.36281C12.6398 4.46014 12.7994 4.61977 12.8967 4.81698L14.9389 8.95491L19.5054 9.61846C20.0519 9.69788 20.4306 10.2053 20.3512 10.7519C20.3196 10.9695 20.2171 11.1706 20.0596 11.3242L16.7553 14.5451L17.5353 19.0931C17.6287 19.6374 17.2631 20.1544 16.7188 20.2478C16.502 20.2849 16.279 20.2496 16.0844 20.1473L12 18V4.25933Z"
+                                  fill="#4E5566"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M12 4.25933V18L7.91559 20.1473C7.42675 20.4043 6.82212 20.2163 6.56512 19.7275C6.46278 19.5328 6.42746 19.3099 6.46464 19.0931L7.24469 14.5451L3.94036 11.3242C3.54487 10.9387 3.53678 10.3055 3.92228 9.91006C4.07579 9.75258 4.27693 9.65009 4.49457 9.61846L9.06104 8.95492L11.1032 4.81699C11.2773 4.46426 11.6316 4.25961 12 4.25933Z"
+                                  fill="#90959F"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_115_172">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="nav-text">Stock View</span>
+            </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-9 col-xxl-12">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="row">
+                                    <div class="col-xl-6 col-sm-6">
+                                        <div class="card bg-primary text-white">
+                                            <div class="card-header border-0 flex-wrap">
+                                                <div class="revenue-date">
+                                                    <span>Profit</span>
+                                                    <h4 class="text-white">${{ profit }}</h4>
+                                                </div>
+                                                <div class="avatar-list avatar-list-stacked me-2">
+                                                    <img src="static/assets/main/images/contacts/pic555.jpg"
+                                                         class="avatar rounded-circle" alt="">
+                                                    <img src="static/assets/main/images/contacts/pic666.jpg"
+                                                         class="avatar rounded-circle" alt="">
+                                                    <span class="avatar rounded-circle bg-white">25+</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="card-body pb-0 custome-tooltip d-flex align-items-center">
+                                                <div id="chartBar" class="chartBar"></div>
+                                                <div>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="10" cy="10" r="10" fill="white"/>
+                                                        <g clip-path="url(#clip0_3_443)">
+                                                            <path opacity="0.3"
+                                                                  d="M13.0641 7.54535C13.3245 7.285 13.3245 6.86289 13.0641 6.60254C12.8038 6.34219 12.3817 6.34219 12.1213 6.60254L6.46445 12.2594C6.2041 12.5197 6.2041 12.9419 6.46445 13.2022C6.7248 13.4626 7.14691 13.4626 7.40726 13.2022L13.0641 7.54535Z"
+                                                                  fill="black"/>
+                                                            <path d="M7.40729 7.26921C7.0391 7.26921 6.74062 6.97073 6.74062 6.60254C6.74062 6.23435 7.0391 5.93587 7.40729 5.93587H13.0641C13.4211 5.93587 13.7147 6.21699 13.7302 6.57358L13.9659 11.9947C13.9819 12.3626 13.6966 12.6737 13.3288 12.6897C12.961 12.7057 12.6498 12.4205 12.6338 12.0526L12.4258 7.26921H7.40729Z"
+                                                                  fill="black"/>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_3_443">
+                                                                <rect width="16" height="16" fill="white"
+                                                                      transform="matrix(-1 0 0 -1 18 18)"/>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <span class="d-block font-w600">￥</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-sm-6">
+                                        <div class="card bg-secondary text-white">
+                                            <div class="card-header border-0">
+                                                <div class="revenue-date">
+                                                    <span>Capital</span>
+                                                    <h4 class="text-white">${{ capital }}</h4>
+                                                </div>
+                                                <div class="avatar-list avatar-list-stacked me-2">
+															<span class="avatar rounded-circle bg-white">
+																<a href="#">
+																	<svg width="14" height="15" viewBox="0 0 14 15"
+                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path fill-rule="evenodd" clip-rule="evenodd"
+                                                                              d="M5.83333 6.27083V1.60417C5.83333 0.959834 6.35567 0.4375 7 0.4375C7.64433 0.4375 8.16667 0.959834 8.16667 1.60417V6.27083H12.8333C13.4777 6.27083 14 6.79317 14 7.4375C14 8.08183 13.4777 8.60417 12.8333 8.60417H8.16667V13.2708C8.16667 13.9152 7.64433 14.4375 7 14.4375C6.35567 14.4375 5.83333 13.9152 5.83333 13.2708V8.60417H1.16667C0.522334 8.60417 0 8.08183 0 7.4375C0 6.79317 0.522334 6.27083 1.16667 6.27083H5.83333Z"
+                                                                              fill="#222B40"/>
+																	</svg>
+																</a>
+															</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="card-body pb-0 custome-tooltip d-flex align-items-center">
+                                                <div id="expensesChart" class="chartBar"></div>
+                                                <div>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                         xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="10" cy="10" r="10" fill="#222B40"/>
+                                                        <g clip-path="url(#clip0_3_473)">
+                                                            <path opacity="0.3"
+                                                                  d="M13.0641 7.54535C13.3245 7.285 13.3245 6.86289 13.0641 6.60254C12.8038 6.34219 12.3817 6.34219 12.1213 6.60254L6.46446 12.2594C6.20411 12.5197 6.20411 12.9419 6.46446 13.2022C6.72481 13.4626 7.14692 13.4626 7.40727 13.2022L13.0641 7.54535Z"
+                                                                  fill="white"/>
+                                                            <path d="M7.40728 7.26921C7.03909 7.26921 6.74061 6.97073 6.74061 6.60254C6.74061 6.23435 7.03909 5.93587 7.40728 5.93587H13.0641C13.4211 5.93587 13.7147 6.21699 13.7302 6.57358L13.9659 11.9947C13.9819 12.3626 13.6966 12.6737 13.3288 12.6897C12.9609 12.7057 12.6498 12.4205 12.6338 12.0526L12.4258 7.26921H7.40728Z"
+                                                                  fill="white"/>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_3_473">
+                                                                <rect width="16" height="16" fill="white"
+                                                                      transform="matrix(-1 0 0 -1 18 18)"/>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    <span class="d-block font-w600 text-black">￥</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body depostit-card">
+                                                <div class="depostit-card-media d-flex justify-content-between style-1">
+                                                    <div>
+                                                        <h6>Profit Stock Amount</h6>
+                                                        <h3>{{ profit_amount }}</h3>
+                                                    </div>
+                                                    <div class="icon-box bg-secondary">
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_3_566)">
+                                                                <path opacity="0.3" fill-rule="evenodd"
+                                                                      clip-rule="evenodd"
+                                                                      d="M8 3V3.5C8 4.32843 8.67157 5 9.5 5H14.5C15.3284 5 16 4.32843 16 3.5V3H18C19.1046 3 20 3.89543 20 5V21C20 22.1046 19.1046 23 18 23H6C4.89543 23 4 22.1046 4 21V5C4 3.89543 4.89543 3 6 3H8Z"
+                                                                      fill="#222B40"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                      d="M10.875 15.75C10.6354 15.75 10.3958 15.6542 10.2042 15.4625L8.2875 13.5458C7.90417 13.1625 7.90417 12.5875 8.2875 12.2042C8.67083 11.8208 9.29375 11.8208 9.62917 12.2042L10.875 13.45L14.0375 10.2875C14.4208 9.90417 14.9958 9.90417 15.3792 10.2875C15.7625 10.6708 15.7625 11.2458 15.3792 11.6292L11.5458 15.4625C11.3542 15.6542 11.1146 15.75 10.875 15.75Z"
+                                                                      fill="#222B40"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                      d="M11 2C11 1.44772 11.4477 1 12 1C12.5523 1 13 1.44772 13 2H14.5C14.7761 2 15 2.22386 15 2.5V3.5C15 3.77614 14.7761 4 14.5 4H9.5C9.22386 4 9 3.77614 9 3.5V2.5C9 2.22386 9.22386 2 9.5 2H11Z"
+                                                                      fill="#222B40"/>
+                                                            </g>
+                                                            <defs>
+                                                                <clipPath id="clip0_3_566">
+                                                                    <rect width="24" height="24" fill="white"/>
+                                                                </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-box mt-0">
+                                                    <div class="d-flex justify-content-between">
+                                                        <p class="mb-0">Profit proportion</p>
+                                                        <p class="mb-0">{{ profit_proportion }}</p>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-secondary"
+                                                             style="width:50%; height:5px; border-radius:4px;"
+                                                             role="progressbar"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-sm-6">
+                                        <div class="card same-card">
+                                            <div class="card-body depostit-card p-0">
+                                                <div class="depostit-card-media d-flex justify-content-between pb-0">
+                                                    <div>
+                                                        <h6>Total Deposit</h6>
+                                                        <h3>${{ deposit }}</h3>
+                                                    </div>
+                                                    <div class="icon-box bg-primary">
+                                                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M11.4642 13.7074C11.4759 12.1252 10.8504 10.8738 9.60279 9.99009C8.6392 9.30968 7.46984 8.95476 6.33882 8.6137C3.98274 7.89943 3.29927 7.52321 3.29927 6.3965C3.29927 5.14147 4.93028 4.69493 6.32655 4.69493C7.34341 4.69493 8.51331 5.01109 9.23985 5.47964L10.6802 3.24887C9.73069 2.6333 8.43112 2.21342 7.14783 2.0831V0H4.49076V2.22918C2.12884 2.74876 0.640949 4.29246 0.640949 6.3965C0.640949 7.87005 1.25327 9.03865 2.45745 9.86289C3.37331 10.4921 4.49028 10.83 5.56927 11.1572C7.88027 11.8557 8.81873 12.2813 8.80805 13.691L8.80799 13.7014C8.80799 14.8845 7.24005 15.3051 5.89676 15.3051C4.62786 15.3051 3.248 14.749 2.46582 13.9222L0.535522 15.7481C1.52607 16.7957 2.96523 17.5364 4.4907 17.8267V20.0001H7.14783V17.8735C9.7724 17.4978 11.4616 15.9177 11.4642 13.7074Z"
+                                                                  fill="#fff"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div id="NewExperience"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card bg-success rainbow-box"
+                                     style="background-image: url(static/assets/main/images/rainbow.gif);background-size: cover;background-blend-mode: luminosity;">
+                                    <div class="card-header border-0">
+                                        <svg width="43" height="40" viewBox="0 0 43 40" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M41.605 3.94728L34.9548 0.107383C34.7065 -0.0357944 34.4007 -0.0357944 34.1525 0.107383C26.172 4.71641 16.338 4.71713 8.35679 0.108821L8.35391 0.107383C8.10569 -0.0357944 7.7999 -0.0357944 7.55168 0.107383L0.901472 3.94656C0.65325 4.08974 0.5 4.35451 0.5 4.64159V12.3207C0.5 12.6077 0.65325 12.8725 0.901472 13.0157C8.88345 17.6225 13.8004 26.1384 13.8004 35.355V35.3579C13.8004 35.6442 13.9537 35.9097 14.2019 36.0529L20.8521 39.8928C20.9766 39.9647 21.1147 40 21.2536 40C21.3924 40 21.5306 39.964 21.655 39.8928L28.3053 36.0529C28.5535 35.9097 28.7067 35.645 28.7067 35.3579C28.706 26.1413 33.623 17.6247 41.605 13.0164L41.6064 13.0157C41.8546 12.8725 42.0079 12.6077 42.0079 12.3207V4.6423C42.0057 4.35523 41.8532 4.09046 41.605 3.94728ZM40.4013 11.858L20.8514 23.1453C20.6032 23.2885 20.4499 23.5533 20.4499 23.8403V29.8891C19.8168 30.2013 19.3923 30.8712 19.439 31.6345C19.4944 32.5325 20.2139 33.2627 21.1118 33.3304C22.1788 33.4109 23.0696 32.5684 23.0696 31.5187C23.0696 30.8035 22.6559 30.1848 22.0551 29.8883C22.0551 26.4319 23.8991 23.2381 26.8922 21.5099L27.0994 21.3905L27.1001 34.8952L21.2521 38.2718L15.4042 34.8952V12.3214C15.4042 12.035 15.2509 11.7695 15.0027 11.6264L9.76338 8.60163C9.76626 8.56206 9.7677 8.52249 9.7677 8.4822C9.7677 7.45549 8.91583 6.62736 7.88049 6.66694C6.93868 6.70291 6.17171 7.46988 6.13573 8.41169C6.09616 9.44703 6.92429 10.2996 7.951 10.2996C8.32513 10.2996 8.67264 10.1867 8.96115 9.99312C11.9542 11.7213 13.7983 14.9151 13.7983 18.3715V18.6097L2.10229 11.8587V5.10637L7.95028 1.72982L27.5002 13.0171C27.7484 13.1603 28.0542 13.1603 28.3024 13.0171L33.541 9.9924C33.8324 10.1881 34.1842 10.3011 34.5619 10.2989C35.5526 10.2931 36.3664 9.47581 36.3678 8.48508C36.3693 7.47996 35.5555 6.66549 34.5511 6.66549C33.5474 6.66549 32.7344 7.47923 32.7344 8.4822C32.7344 8.52249 32.7359 8.56206 32.7387 8.60163C29.745 10.3298 26.0569 10.3298 23.0631 8.60163L22.8573 8.48292L34.5511 1.72982L40.3991 5.10637V11.858H40.4013Z"
+                                                  fill="white"/>
+                                        </svg>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="finance">
+                                            <h4>Your Finances, Safe and Secure</h4>
+                                            <p>
+                                                This platform provides integrated investment management to facilitate
+                                                your own investment. Give full play to your talents!
+                                            </p>
+                                        </div>
+                                        <div class="d-flex pt-3">
+                                            <div class="avatar-list avatar-list-stacked">
+
+                                            </div>
+                                            <div class="ratting-data">
+                                                <h4>15k+</h4>
+                                                <span>Happy Clients</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-media">
+                                            <img src="static/assets/main/images/p2.gif" alt="">
+                                        </div>
+                                        <div class="media-data">
+                                            <h4>Compete this projects Friday</h4>
+                                            <div class="d-flex align-items-center">
+                                                <span>Wang and Han</span>
+                                            </div>
+                                            <div class="dateformat d-flex justify-content-between align-items-end">
+                                                <div>
+                                                    <p>Due Date</p>
+                                                    <span>22 Dec 2023</span>
+                                                </div>
+                                                <span class="badge badge-primary light border-0">Inprogress</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-xxl-12">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive active-projects">
+                            <div class="tbl-caption">
+                                <h4 class="heading mb-0">Portfolio Management</h4>
+                            </div>
+                            <table id="projects-tbl" class="table">
+                                <thead>
+                                <tr>
+                                    <th>StockCode</th>
+                                    <th>StockName</th>
+                                    <th>Return</th>
+                                    <th>Position</th>
+                                    <th>Status</th>
+                                    <th>StartDate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for row in portfolios %}
+                                <tr>
+                                    <td>{{ row.StockCode }}</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <p class="mb-0 ms-2">{{ row.StockName }}</p>
+                                        </div>
+                                    </td>
+                                    <td class="pe-0">
+                                        <div class="tbl-progress-box">
+                                            <div class="progress">
+                                                <div class="progress-bar {% if row.Return > 0 %}bg-danger{% elif row.Return < 0 %}bg-success{% elif row.Return == 0 %}bg-blue{% else %}bg-purple{% endif %}"
+                                                     style="width:{{ row.Return * 100 }}%; height:5px; border-radius:4px;"
+                                                     role="progressbar"></div>
+                                            </div>
+                                            <span class="{% if row.Return > 0 %}text-danger{% elif row.Return < 0 %}text-success{% elif row.Return == 0 %}
+									text-white{% else %}text-purple{% endif %}">{{ "{:.2%}".format(row.Return) }}</span>
+                                        </div>
+                                    </td>
+                                    <td class="pe-0">
+                                        <div class="avatar-list avatar-list-stacked">
+                                            <span class="text-white">{{ row.Position }}</span>
+
+                                        </div>
+                                    </td>
+                                    <td class="pe-0">
+                                        <span class="badge {% if row.Status == 'gain' %}badge-danger{% elif row.Status == 'loss' %}badge-success{% elif row.Status == 'even' %}badge-purple{% elif row.Status == 'even' and row.Return == 0 %}badge-blue{% endif %} light border-0">{{ row.Status }}</span>
+                                    </td>
+                                    <td>
+                                        <span>{{ row.StartDate.strftime('%d %b %Y') }}</span>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="copyright">
+        <p> <a href="https://dexignzone.com/" target="_blank">WangZihan and Hanhu</a> 2023</p>
+    </div>
+</div>
+
+
+</div>
+
+
+<script src="static/assets/main/vendor/global/global.min.js"></script>
+<script src="static/assets/main/vendor/chart.js/Chart.bundle.min.js"></script>
+<script src="static/assets/main/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="static/assets/main/vendor/apexchart/apexchart.js"></script>
+
+
+<script src="static/assets/main/js/dashboard/dashboard-1.js"></script>
+<script src="static/assets/main/vendor/draggable/draggable.js"></script>
+<script src="static/assets/main/vendor/swiper/js/swiper-bundle.min.js"></script>
+
+
+<script src="static/assets/main/vendor/tagify/dist/tagify.js"></script>
+
+<script src="static/assets/main/vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="static/assets/main/vendor/datatables/js/dataTables.buttons.min.js"></script>
+<script src="static/assets/main/vendor/datatables/js/buttons.html5.min.js"></script>
+<script src="static/assets/main/vendor/datatables/js/jszip.min.js"></script>
+<script src="static/assets/main/js/plugins-init/datatables.init.js"></script>
+
+
+<script src="vendor/bootstrap-datetimepicker/js/moment.js"></script>
+<script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script src="static/assets/main/vendor/jqvmap/js/jquery.vmap.min.js"></script>
+<script src="static/assets/main/vendor/jqvmap/js/jquery.vmap.world.js"></script>
+<script src="static/assets/main/vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+<script src="static/assets/main/js/custom.js"></script>
+<script src="static/assets/main/js/deznav-init.js"></script>
+<script src="static/assets/main/js/demo.js"></script>
+<script src="static/assets/main/js/styleSwitcher.js"></script>
+<script>
+		jQuery(document).ready(function(){
+			setTimeout(function(){
+				dzSettingsOptions.version = 'dark';
+				new dzSettings(dzSettingsOptions);
+			},1500)
+		});
+
+</script>
+
+
+</body>
+</html>
