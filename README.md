@@ -88,10 +88,10 @@ Feel free to ⭐ star or fork this repository. If you have any suggestions or is
 
 ## 🖼 UI show
 
-###Initial interface display
+### Initial interface display
 "LOGIN IN" means to log in at the client end. Admin Platform is for the administrator end to log in.
-![Login Page](images/login_page.png)
+![Login Page](images/Initial interface.png)
 
-### 首页界面
+### Login interface display
 ![Home Page](images/home_page.png)
 
