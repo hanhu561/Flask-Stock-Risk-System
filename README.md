@@ -93,5 +93,5 @@ Feel free to ⭐ star or fork this repository. If you have any suggestions or is
 ![Login Page](images/Initial interface.png)
 
 ### Login interface display
-![Home Page](images/Initial interfac.png)
+![Home Page](images/Initial interface.png)
 
