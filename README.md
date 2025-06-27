@@ -85,3 +85,13 @@ Ensure TCP/IP is enabled in your SQL Server configuration
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 Feel free to ⭐ star or fork this repository. If you have any suggestions or issues, open an issue or contribute directly!
+
+## 🖼 UI show
+
+###Initial interface display
+"LOGIN IN" means to log in at the client end. Admin Platform is for the administrator end to log in.
+![Login Page](images/login_page.png)
+
+### 首页界面
+![Home Page](images/home_page.png)
+
