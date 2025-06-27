@@ -25,7 +25,7 @@ def login():
         password = request.form.get('password')
         print(f"SELECT * FROM Account WHERE Email = {email} AND Password = {password}")
 
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         with conn.cursor() as cursor:
             cursor.execute((f"SELECT * FROM Account WHERE Email = '{email}' AND Password = '{password}'"))
             user = cursor.fetchone()
@@ -49,7 +49,7 @@ def login():
 def home():
     email = session['user_email']
     password = session['user_password']
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             # query = f"SELECT * FROM Account WHERE Email = '{email}' AND Password = '{password}'"
@@ -90,7 +90,7 @@ def portfolio():
     email = session['user_email']
     password = session['user_password']
 
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             # query = f"SELECT * FROM Account WHERE Email = '{email}' AND Password = '{password}'"
@@ -183,7 +183,7 @@ def portfolio():
 @app.route('/get_earning_chart_data/<series_type>', methods=['GET'])
 def get_earning_chart_data(series_type):
     email = session['user_email']
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
 
     cursor = conn.cursor()
 
@@ -217,7 +217,7 @@ def get_earning_chart_data(series_type):
 def SimulateProfit(portfolio,Kinds):
 
     def inside1(StockNote,  StartTime, EndTime):
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             query_time = f"SELECT Num FROM Times WHERE Time >= '{StartTime}' AND Time <= '{EndTime}' ORDER BY Time"
             time_df = pd.read_sql_query(query_time, conn)
@@ -280,7 +280,7 @@ def delete_item():
 
     stockcode = data.get('stockcode')
     print(f"Deleting item with stockcode: {stockcode}")
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             query = f"DELETE FROM Portfolio WHERE StockCode = '{stockcode}' AND Email = '{email}'"
@@ -315,7 +315,7 @@ def editstock():
         # print(f"Received password: {password}")
         email = session['user_email']
         if password != None:
-            conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+            conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
             try:
                 with conn.cursor(as_dict=True) as cursor:
                     cursor.execute(f"SELECT * FROM Account WHERE Email = '{email}' AND Password = '{password}'")
@@ -340,7 +340,7 @@ def editstock():
 
 @app.route('/stockview', methods=['GET', 'POST'])
 def stockview():
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             query = "SELECT StockCode, StockName, Industry, EstablishTime, BusinessSize, StaffNum FROM ManyStocks"
@@ -353,7 +353,7 @@ def stockview():
     if request.method == 'POST':
         search_term = request.form['search']
         print(f"Received search term: {search_term}")
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 query = f"SELECT StockCode, StockName, Industry, BusinessSize, StaffNum, EstablishTime FROM ManyStocks WHERE " \
@@ -391,7 +391,7 @@ def addstock():
         # print(f"Received position: {position}")
         # print(f"Received password: {password}")
         if password != None:
-            conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+            conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
             try:
                 with conn.cursor(as_dict=True) as cursor:
                     cursor.execute(f"SELECT * FROM Account WHERE Email = '{email}' AND Password = '{password}'")
@@ -423,7 +423,7 @@ def stocksingle():
     stockcode = request.args.get('stockcode')
     print(stockcode)
     session['stockcode'] = stockcode
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             query = f"SELECT OpenPrice, ClosePrice, MaxPrice, MinPrice, InsideTrade, OutsideTrade, " \
@@ -469,7 +469,7 @@ def getSearchQuery(time_period, stock_code):
         return f"SELECT * FROM OpenPriceDay WHERE StockCode = '{stock_code}'"
 
 def get_data(time_period):
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     result_sequence=[]
     try:
         with conn.cursor(as_dict=True) as cursor:
@@ -500,7 +500,7 @@ def admin_login():
         Email = email
         Password = password
         print(f"SELECT * FROM Account WHERE Email = {email} AND Password = {password}")
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         with conn.cursor() as cursor:
             cursor.execute((f"SELECT * FROM Administrator WHERE Email = '{email}' AND Password = '{password}'"))
             user = cursor.fetchone()
@@ -519,7 +519,7 @@ def admin_login():
 ##User information management interface  add edit 和delete
 @app.route('/admin_user_management')
 def admin_user_management():
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             cursor.execute("SELECT * FROM individual")
@@ -568,7 +568,7 @@ def admin_user_add():
         # print("Country:", country)
         # print("RiskGrade:", risk_grade)
         # print("Password:", password)
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 cost="0"
@@ -585,7 +585,7 @@ def admin_user_add():
 def admin_user_edit():
     email = request.args.get('email', '')
     print(email)
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             cursor.execute(f"SELECT * FROM individual WHERE Email = '{email}'")
@@ -627,7 +627,7 @@ def admin_user_edit():
         # print(f"Selected Country: {country}")
         # print(f"RiskGrade: {riskgrade}")
         # print(f"Password: {password}")
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 print(email)
@@ -650,7 +650,7 @@ def admin_user_edit():
 def admin_user_delete():
     email_to_delete = request.form.get('email')
     print(email_to_delete)
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             delete_query = f"DELETE FROM Individual WHERE Email = '{email_to_delete}'"
@@ -669,7 +669,7 @@ def admin_user_follow():
         email=data['email']
         session['user_email'] = data['email']
         password =''
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 query = f"SELECT Password FROM individual WHERE Email = '{email}'"
@@ -695,7 +695,7 @@ def admin_user_costbill():
         session['user_email'] = data['email']
         print(email)
         password = ''
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 query = f"SELECT Password FROM individual WHERE Email = '{email}'"
@@ -706,7 +706,7 @@ def admin_user_costbill():
         finally:
             conn.close()
         session['user_password'] = password
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 query = f"SELECT FirstName, LastName, CONCAT(FirstName, ' ', LastName) AS name, " \
@@ -753,7 +753,7 @@ def admin_user_costbill():
 
 @app.route('/admin_costbill')
 def admin_costbill():
-        conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+        conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
         try:
             with conn.cursor(as_dict=True) as cursor:
                 email = session['user_email']
@@ -797,7 +797,7 @@ def admin_costbill():
 
 @app.route('/admin_simulated')
 def admin_simulated():
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     try:
         with conn.cursor(as_dict=True) as cursor:
             query = f"SELECT StockName, Industry FROM ManyStocks"
@@ -841,7 +841,7 @@ def admin_simulated_analytics():
     selected_stocks = session.get('selected_stocks', [])
     # print(selected_stocks)
 
-    conn = pymssql.connect(host='localhost', user='sa', password='561521HhHh', database='Project202312', charset='utf8')
+    conn = pymssql.connect(host='localhost', user='sa', password='******', database='Project', charset='utf8')
     stockdata = []
     try:
         with conn.cursor(as_dict=True) as cursor:
@@ -895,7 +895,7 @@ if __name__ == '__main__':
     # import pymssql
     #
     # try:
-    #     conn = pymssql.connect(server='localhost\SQLEXPRESS', port=1433, user='sa', password='561521HhHh', database='Project202312')
+    #     conn = pymssql.connect(server='localhost\SQLEXPRESS', port=1433, user='sa', password='******', database='Project')
     #
     #     print("连接成功！")
     #     conn.close()
