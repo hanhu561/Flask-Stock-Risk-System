@@ -15,16 +15,27 @@ A stock risk analysis system built with the Flask framework and backed by a SQL 
 ## 📁 Project Structure
 
 SQL_Project/
+
 │
+
 ├── static/ # Static assets (CSS, JS, images)
+
 ├── templates/ # HTML templates
+
 │ ├── login.html
+
 │ ├── home.html
+
 │ ├── admin_home.html
+
 │ └── ...
+
 ├── Project_Run.py # Main application entry
+
 ├── requirements.txt # Python dependencies
+
 ├── README.md # Project documentation
+
 └── LICENSE
 
 
