@@ -104,7 +104,7 @@ Feel free to ⭐ star or fork this repository. If you have any suggestions or is
 
 ### Login Interface Display
 
-![images/administrator_login.png](images/administrator_login.png)
+![images/login_interface.png](images/login_interface.png)
 
 Query whether it is stored in the Account table. If there is a line in the input email and password, it will jump to the next one.
 On the interface, if the account is entered incorrectly and cannot be logged in, that is, the line where the email and password do not exist will pop up the following window.
