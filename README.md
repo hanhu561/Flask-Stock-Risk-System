@@ -236,16 +236,27 @@ Once completed, the user information is inserted into the database.
 
 Clicking the button in the top-right corner switches the data display to a list view.
 The Search function in the top-left corner is implemented with HTML and also supports data queries.
-
+Clicking Edit redirects to the user information editing page, while clicking Delete removes the user information from the system.
 
 ### Edit User Information
 
-![images/inquire_users.png](images/inquire_users.png)
+![images/modify_user_information.png](images/modify_user_information.png)
+
+User information can be updated by filling out the edit form.
+The changes are applied to the database using SQL update statements.
 
 
+### Simulated Stock Investment
 
+![images/investment_stocks.png](images/investment_stocks.png)
 
+Clicking the Simulated Invest button on the right navigates to the stock simulation page, which supports stock searching.
+Users can select a stock, set the investment position and date, and then click the Simulated Stock button to perform a simulated investment.
 
+![images/portfolio_renditen.png](images/portfolio_renditen.png)
+
+The system retrieves user input via request, and uses the SimulateProfit method (as previously described in the user section) to simulate the investment.
+SQL queries are used to assist in data retrieval, and the system then redirects to a new page displaying the simulation results.
 
 
 
