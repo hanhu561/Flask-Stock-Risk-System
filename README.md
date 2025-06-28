@@ -50,7 +50,7 @@ SQL_Project/
 
 ## 🛠️ Installation & Setup
 
-1. Clone the repository
+1.Clone the repository
 git clone https://github.com/hanhu561/Flask-Stock-Risk-System.git
 cd Flask-Stock-Risk-System
 
