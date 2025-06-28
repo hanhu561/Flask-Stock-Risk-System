@@ -90,9 +90,10 @@ Feel free to ⭐ star or fork this repository. If you have any suggestions or is
 
 ### Initial interface display
 "LOGIN IN" means to log in at the client end. Admin Platform is for the administrator end to log in.
-![Initial Interface](images/Initial interface.png)
+
+![Initial Interface](images/initial_interface.png)
 
 
 ### Login interface display
-![Home Page](images/Initial interface.png)
+![Home Page](images/initial_interface.png)
 
