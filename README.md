@@ -106,7 +106,7 @@ Feel free to ⭐ star or fork this repository. If you have any suggestions or is
 
 ![images/administrator_login.png](images/administrator_login.png)
 
-The SQL statement for the login function is shown in the above figure, that is, to query whether it is stored in the Account table. If there is a line in the input email and password, it will jump to the next one.
+Query whether it is stored in the Account table. If there is a line in the input email and password, it will jump to the next one.
 On the interface, if the account is entered incorrectly and cannot be logged in, that is, the line where the email and password do not exist will pop up the following window.
 
 
